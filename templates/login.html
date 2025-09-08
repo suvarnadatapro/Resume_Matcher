@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="mx-auto max-w-md">
+  <div class="bg-white p-4 p-md-5 rounded-3 card-elevated hover-rise">
+    <h1 class="h4 fw-bold mb-3">Login</h1>
+    <form method="post" class="space-y-4">
+      <div>
+        <label class="block text-gray-700 fw-semibold mb-1">Username</label>
+        <input type="text" name="username" required class="form-control" placeholder="Enter your username" title="Username">
+      </div>
+      <div>
+        <label class="block text-gray-700 fw-semibold mb-1">Password</label>
+        <input type="password" name="password" required class="form-control" placeholder="Enter your password" title="Password">
+      </div>
+      <button type="submit" class="btn btn-primary w-100">Login</button>
+    </form>
+    <p class="text-sm text-gray-600 mt-3">Don't have an account? <a href="{{ url_for('signup') }}" class="text-decoration-underline">Signup here</a></p>
+    <p class="text-sm text-gray-600 mt-2">Already logged in? <a href="{{ url_for('upload') }}" class="text-decoration-underline">Go to Upload</a></p>
+  </div>
+</div>
+{% endblock %}

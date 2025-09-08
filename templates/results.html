@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="bg-white p-4 p-md-5 rounded-3 card-elevated hover-rise w-100">
+  <div class="d-flex align-items-center justify-content-between mb-3">
+    <h1 class="h4 fw-bold m-0">Resume Matching Results</h1>
+    <a href="{{ url_for('upload') }}" class="link-primary small">Back to upload</a>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-hover align-middle">
+      <thead class="table-light">
+        <tr>
+          <th scope="col">Resume</th>
+          <th scope="col">JD1 Avg</th>
+          <th scope="col">JD2 Avg</th>
+          <th scope="col">JD3 Avg</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for result in results %}
+        <tr>
+          <td>{{ result['Resume'] }}</td>
+          <td>{{ ('%.0f' % (result.get('JD1 Avg Score', 0) * 100)) + '%' }}</td>
+          <td>{{ ('%.0f' % (result.get('JD2 Avg Score', 0) * 100)) + '%' }}</td>
+          <td>{{ ('%.0f' % (result.get('JD3 Avg Score', 0) * 100)) + '%' }}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

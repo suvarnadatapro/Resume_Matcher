@@ -1,0 +1,244 @@
+{% extends "base.html" %}
+{% block content %}
+<!-- Hero Section -->
+<div class="hero-section position-relative" style="background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(37, 99, 235, 0.4)), url('https://png.pngtree.com/thumb_back/fh260/background/20220314/pngtree-blue-background-simple-office-glasses-mobile-phone-creative-pictures-resume-work-image_1048168.jpg'); background-size: cover; background-position: center; min-height: 80vh;">
+  <div class="container position-relative" style="z-index: 2;">
+    <div class="row align-items-center min-vh-80">
+      <div class="col-lg-8 mx-auto text-center text-white" style="padding-top: 80px; text-shadow: 2px 2px 4px rgba(0,0,0,0.7);">
+        <h1 class="display-3 fw-bold mb-4">Resume Matcher</h1>
+        <p class="lead mb-4 fs-4">AI-Powered Resume Analysis for Smart Hiring Decisions</p>
+        <p class="mb-5 fs-5">Compare multiple resumes against job descriptions using advanced NLP techniques including TF-IDF and BERT semantic similarity.</p>
+        <div class="d-flex justify-content-center gap-3 flex-wrap">
+          <a href="{{ url_for('signup') }}" class="btn btn-light btn-lg px-5 py-3 text-primary fw-bold shadow">Get Started</a>
+          <a href="{{ url_for('login') }}" class="btn btn-outline-light btn-lg px-5 py-3 shadow">Login</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features Section -->
+<div class="container py-5">
+  <h2 class="text-center fw-bold mb-5">Key Features</h2>
+  <div class="row g-4">
+    <div class="col-md-4">
+      <div class="bg-white p-4 rounded-3 card-elevated hover-rise h-100 d-flex flex-column">
+        <div class="text-center mb-3 flex-grow-1 d-flex align-items-center justify-content-center">
+          <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+               alt="Document upload" 
+               class="img-fluid rounded" 
+               style="height: 120px; object-fit: cover; width: 100%;">
+        </div>
+        <h5 class="fw-bold text-center mb-3">Multi-Format Support</h5>
+        <p class="text-muted text-center">Upload resumes in PDF and DOCX formats. Process multiple resumes simultaneously for efficient comparison.</p>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="bg-white p-4 rounded-3 card-elevated hover-rise h-100 d-flex flex-column">
+        <div class="text-center mb-3 flex-grow-1 d-flex align-items-center justify-content-center">
+          <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+               alt="AI and machine learning" 
+               class="img-fluid rounded" 
+               style="height: 120px; object-fit: cover; width: 100%;">
+        </div>
+        <h5 class="fw-bold text-center mb-3">AI-Powered Analysis</h5>
+        <p class="text-muted text-center">Advanced NLP using TF-IDF cosine similarity and BERT semantic embeddings for accurate matching scores.</p>
+      </div>
+    </div>
+    
+    <div class="col-md-4">
+      <div class="bg-white p-4 rounded-3 card-elevated hover-rise h-100 d-flex flex-column">
+        <div class="text-center mb-3 flex-grow-1 d-flex align-items-center justify-content-center">
+          <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" 
+               alt="Data analytics dashboard" 
+               class="img-fluid rounded" 
+               style="height: 120px; object-fit: cover; width: 100%;">
+        </div>
+        <h5 class="fw-bold text-center mb-3">Multiple Job Descriptions</h5>
+        <p class="text-muted text-center">Compare resumes against up to 3 different job descriptions and get percentage-based similarity scores.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- How It Works Section -->
+<div class="bg-white py-5">
+  <div class="container">
+    <h2 class="text-center fw-bold mb-5">How It Works</h2>
+    <div class="row g-4">
+      <div class="col-md-3">
+        <div class="bg-white p-4 rounded-3 card-elevated hover-rise h-100 d-flex flex-column text-center">
+          <div class="mb-3 flex-grow-1 d-flex align-items-center justify-content-center">
+            <img src="https://images.unsplash.com/photo-1596526131083-e8c633c948d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                 alt="Upload documents" 
+                 class="img-fluid rounded-circle" 
+                 style="width: 80px; height: 80px; object-fit: cover;">
+          </div>
+          <h5 class="fw-bold mb-3">Upload Resumes</h5>
+          <p class="text-muted">Upload multiple resume files in PDF or DOCX format</p>
+        </div>
+      </div>
+      
+      <div class="col-md-3">
+        <div class="bg-white p-4 rounded-3 card-elevated hover-rise h-100 d-flex flex-column text-center">
+          <div class="mb-3 flex-grow-1 d-flex align-items-center justify-content-center">
+            <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                 alt="Job description" 
+                 class="img-fluid rounded-circle" 
+                 style="width: 80px; height: 80px; object-fit: cover;">
+          </div>
+          <h5 class="fw-bold mb-3">Add Job Descriptions</h5>
+          <p class="text-muted">Paste up to 3 job descriptions for comparison</p>
+        </div>
+      </div>
+      
+      <div class="col-md-3">
+        <div class="bg-white p-4 rounded-3 card-elevated hover-rise h-100 d-flex flex-column text-center">
+          <div class="mb-3 flex-grow-1 d-flex align-items-center justify-content-center">
+            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                 alt="AI processing" 
+                 class="img-fluid rounded-circle" 
+                 style="width: 80px; height: 80px; object-fit: cover;">
+          </div>
+          <h5 class="fw-bold mb-3">AI Analysis</h5>
+          <p class="text-muted">Our AI analyzes and compares using advanced NLP</p>
+        </div>
+      </div>
+      
+      <div class="col-md-3">
+        <div class="bg-white p-4 rounded-3 card-elevated hover-rise h-100 d-flex flex-column text-center">
+          <div class="mb-3 flex-grow-1 d-flex align-items-center justify-content-center">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=200&q=80" 
+                 alt="Results dashboard" 
+                 class="img-fluid rounded-circle" 
+                 style="width: 80px; height: 80px; object-fit: cover;">
+          </div>
+          <h5 class="fw-bold mb-3">Get Results</h5>
+          <p class="text-muted">View percentage-based matching scores instantly</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Technology Stack Section -->
+<div class="container py-5">
+  <div class="row align-items-center">
+    <div class="col-md-6">
+      <h2 class="fw-bold mb-4">Powered by Advanced Technology</h2>
+      <div class="row g-3">
+        <div class="col-6">
+          <div class="d-flex align-items-center">
+            <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
+              <i class="fab fa-python text-primary"></i>
+            </div>
+            <span class="fw-semibold">Python & Flask</span>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="d-flex align-items-center">
+            <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
+              <i class="fas fa-robot text-primary"></i>
+            </div>
+            <span class="fw-semibold">BERT & Transformers</span>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="d-flex align-items-center">
+            <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
+              <i class="fas fa-chart-line text-primary"></i>
+            </div>
+            <span class="fw-semibold">TF-IDF Analysis</span>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="d-flex align-items-center">
+            <div class="bg-primary bg-opacity-10 rounded p-2 me-3">
+              <i class="fas fa-brain text-primary"></i>
+            </div>
+            <span class="fw-semibold">Scikit-learn</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="d-flex justify-content-center">
+        <img src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+             alt="Technology and coding" 
+             class="img-fluid rounded-3 shadow-lg">
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ready to Get Started Section -->
+<div class="bg-white py-5">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="bg-white p-5 rounded-3 card-elevated text-center mx-3">
+          <h4 class="fw-bold mb-3">Ready to Get Started?</h4>
+          <p class="text-muted mb-4">Join thousands of recruiters making smarter hiring decisions</p>
+          <a href="{{ url_for('signup') }}" class="btn btn-primary btn-lg">Start Matching Resumes</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Stats Section -->
+<div class="container py-5">
+  <h2 class="text-center fw-bold mb-5">Our Achievements</h2>
+  <div class="row g-4">
+    <div class="col-md-3">
+      <div class="bg-white p-4 rounded-3 card-elevated hover-rise h-100 d-flex flex-column text-center">
+        <div class="mb-3 flex-grow-1 d-flex align-items-center justify-content-center">
+          <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+               alt="Resume processing" 
+               class="img-fluid rounded-circle" 
+               style="width: 60px; height: 60px; object-fit: cover;">
+        </div>
+        <h3 class="fw-bold text-primary mb-2">1000+</h3>
+        <p class="text-muted">Resumes Processed</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="bg-white p-4 rounded-3 card-elevated hover-rise h-100 d-flex flex-column text-center">
+        <div class="mb-3 flex-grow-1 d-flex align-items-center justify-content-center">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+               alt="High accuracy" 
+               class="img-fluid rounded-circle" 
+               style="width: 60px; height: 60px; object-fit: cover;">
+        </div>
+        <h3 class="fw-bold text-primary mb-2">95%</h3>
+        <p class="text-muted">Accuracy Rate</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="bg-white p-4 rounded-3 card-elevated hover-rise h-100 d-flex flex-column text-center">
+        <div class="mb-3 flex-grow-1 d-flex align-items-center justify-content-center">
+          <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+               alt="Trusted companies" 
+               class="img-fluid rounded-circle" 
+               style="width: 60px; height: 60px; object-fit: cover;">
+        </div>
+        <h3 class="fw-bold text-primary mb-2">50+</h3>
+        <p class="text-muted">Companies Trust Us</p>
+      </div>
+    </div>
+    <div class="col-md-3">
+      <div class="bg-white p-4 rounded-3 card-elevated hover-rise h-100 d-flex flex-column text-center">
+        <div class="mb-3 flex-grow-1 d-flex align-items-center justify-content-center">
+          <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" 
+               alt="24/7 availability" 
+               class="img-fluid rounded-circle" 
+               style="width: 60px; height: 60px; object-fit: cover;">
+        </div>
+        <h3 class="fw-bold text-primary mb-2">24/7</h3>
+        <p class="text-muted">Available</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
